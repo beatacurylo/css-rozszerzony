@@ -1,0 +1,107 @@
+/*before_after nie istnieje w dokumencie jako programisci jesttesmy w stanie dodac taki ele musimy ustawic wartosc contetnt np content''*/
+#before_after p::before {
+    content: "P ";
+        color: red;
+}
+#before_after p::after {
+    content: " P";
+        color: red;
+}
+/*zmienia ppierwsza litere*/
+#before_after p::first-letter {
+
+        color: yellow;
+    font-weight: bold;
+}
+/*kazdy inaczej moze widziec ta 1 linie*/
+#before_after p::first-line {
+    font-size: 20px;
+    color: red;
+}
+
+#linki a:link{
+    color: pink;
+    font-style: italic;
+}
+#linki a:visited{
+    color:grey;}
+    
+#linki a:hover {
+    border: 1px solid black;
+}  
+/*lpm lewy przysisk myszy ,od momentu kliecia do puszenia lpm*/
+#linki a:active {
+    color:red;
+    font-weight: bold;
+}
+/*:focus do formularza input, odpalane kiedy pola formularza jest aktywne*/
+
+#inputy input:focus{
+    border: 3px solid black;
+}
+
+/*:target okresla wyglad el do ktorego prowadzi kotwica*/
+div:target{
+    border: 1px solid black;
+}
+/*:lang wyglad o atr lang*/
+
+div:lang(pl){
+border: 3px solid blue;
+}
+/*:first-child okr wyglad pierwszego el listy*/
+
+#childs ul li:first-child{
+    font-size: 30px;
+    color:red;
+}
+
+#childs ul li:last-child{
+    background-color: yellow;}
+
+/*:only childe okr wyglad jedynego el swojego rodzica*/
+
+#before_after p:only-child{
+    color:violet;
+}
+
+/*:empty łamie el który jest pusty*/
+#childs span:empty{
+    display: block;
+    height: 200px;
+    width: 200px;
+    background-color: green;
+}
+/*
+#childs ul li:nth-last-child(even){
+background-color: violet;
+}
+#childs ul li:nth-last-child(5){
+background-color: green;
+}
+*/
+#childs ul li:nth-last-child(4n+1){
+    background-color: green;
+}
+/*selektory atrybutów*/
+/*po nazwie atrybutu*/
+#atrybuty input[type]{
+  display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#atrybuty input[type="tel"]{
+border: 5px solid black;
+}
+#atrybuty input[type~="opis"]{
+    border: 5px solid black;} 
+
+#atrybuty input[type*="op"]{
+    border: 5px solid violet;}
+/*po wartosco atrybutu od ciagu*/
+
+#atrybuty input[type^="pierwszy"]{
+    border: 5px solid red;}
+
+#atrybuty input[type$="q"]{
+    border: 5px solid grey;}
